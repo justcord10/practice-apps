@@ -1,9 +1,11 @@
 import React from 'react';
+import GlossaryListItem from './GlossaryListItem.jsx';
 
 var GlossaryList = () => {
 
   return (
-    <div> </div>
+    <div>Glossary List</div>
+
   );
 };
 

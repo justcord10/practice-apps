@@ -3,7 +3,7 @@ import React from "react";
 var AddEntry = () => {
 
   return (
-    <div> </div>
+    <div>AddEntry</div>
   );
 
 };

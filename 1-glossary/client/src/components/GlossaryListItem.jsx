@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 var GlossaryListItem = () => {
 
   return (
-    <div> </div>
+    <div>GlossaryListItem</div>
   );
 };
 
