@@ -18,12 +18,29 @@ var App = () => {
     });
   }, []);
 
+  // Handlers ////////////////////////////////////////////////////////////////
+  const addEntryButtonHandler = () => {
+    console.log('clicked Add Entry');
+  };
+
+  const searchButtonHandler = () => {
+    console.log('clicked Search');
+  };
+
+  const editButtonHandler = () => {
+    console.log('clicked Edit Entry');
+  };
+
+  const deleteButtonHandler = () => {
+    console.log('clicked Delete Entry');
+  };
+
   return (
     <div>
       <div>App</div>
-      <div><AddEntry /></div>
-      <div><Search /></div>
-      <div><GlossaryList glossaryList={displayedGlossaryList}/></div>
+      <div><AddEntry addEntryButtonHandler={addEntryButtonHandler}/></div>
+      <div><Search searchButtonHandler={searchButtonHandler}/></div>
+      <div><GlossaryList glossaryList={displayedGlossaryList} editButtonHandler={editButtonHandler} deleteButtonHandler={deleteButtonHandler}/></div>
     </div>
   );
 };

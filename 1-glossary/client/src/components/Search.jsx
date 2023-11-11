@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Search = () => {
+var Search = ({searchButtonHandler}) => {
 
   return (
     <div>Search</div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-var AddEntry = () => {
+var AddEntry = ({addEntryButtonHandler}) => {
 
   return (
     <div>AddEntry</div>
