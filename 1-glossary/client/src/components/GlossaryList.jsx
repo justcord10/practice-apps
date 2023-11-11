@@ -1,11 +1,15 @@
 import React from 'react';
 import GlossaryListItem from './GlossaryListItem.jsx';
 
-var GlossaryList = () => {
+var GlossaryList = ({glossaryList}) => {
 
   return (
-    <div>Glossary List</div>
-
+    <div>
+      <div>Glossary List</div>
+      {glossaryList.map((entry) => (
+        <div><GlossaryListItem entry={entry} /></div>
+      ))}
+    </div>
   );
 };
 
