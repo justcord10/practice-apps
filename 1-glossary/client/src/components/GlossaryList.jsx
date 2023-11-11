@@ -5,9 +5,9 @@ var GlossaryList = ({glossaryList, editButtonHandler, deleteButtonHandler}) => {
 
   return (
     <div>
-      <div>Glossary List</div>
+      <h3>Glossary List</h3>
       {glossaryList.map((entry) => (
-        <div><GlossaryListItem entry={entry} /></div>
+        <div><GlossaryListItem entry={entry} editButtonHandler={editButtonHandler} deleteButtonHandler={deleteButtonHandler} /></div>
       ))}
     </div>
   );

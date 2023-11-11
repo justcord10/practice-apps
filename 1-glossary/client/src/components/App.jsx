@@ -19,25 +19,26 @@ var App = () => {
   }, []);
 
   // Handlers ////////////////////////////////////////////////////////////////
-  const addEntryButtonHandler = () => {
-    console.log('clicked Add Entry');
+  const addEntryButtonHandler = (word, def) => {
+    console.log(`clicked Add Entry with ${word} and ${def}`);
+
   };
 
-  const searchButtonHandler = () => {
-    console.log('clicked Search');
+  const searchButtonHandler = (word) => {
+    console.log(`clicked Search with ${word}`);
   };
 
-  const editButtonHandler = () => {
-    console.log('clicked Edit Entry');
+  const editButtonHandler = (word, def, id) => {
+    console.log(`clicked Edit Entry with ${word} ${def} ${id}`);
   };
 
-  const deleteButtonHandler = () => {
-    console.log('clicked Delete Entry');
+  const deleteButtonHandler = (entry) => {
+    console.log(`clicked Delete Entry with ${entry._id}`);
   };
 
   return (
     <div>
-      <div>App</div>
+      <div> </div>
       <div><AddEntry addEntryButtonHandler={addEntryButtonHandler}/></div>
       <div><Search searchButtonHandler={searchButtonHandler}/></div>
       <div><GlossaryList glossaryList={displayedGlossaryList} editButtonHandler={editButtonHandler} deleteButtonHandler={deleteButtonHandler}/></div>
