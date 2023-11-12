@@ -24,7 +24,4 @@ CREATE TABLE responses (
   billing_zip_code VARCHAR(150),
   f3_is_filled BOOLEAN DEFAULT 0,
   final_form_is_submitted BOOLEAN DEFAULT 0
-
-
-
 );

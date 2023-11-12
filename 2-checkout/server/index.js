@@ -23,6 +23,7 @@ app.use(express.json());
 
 // routes /////////////////////////////////////////////////////////
 app.get('/checkout', controllers.getAll);
+//need to make sure to send in the cookie value in the request body object!!
 app.post('/checkout', controllers.postForm);
 
 app.listen(process.env.PORT);
