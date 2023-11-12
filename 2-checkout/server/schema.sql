@@ -6,7 +6,7 @@ USE checkout;
 -- CREATE necessary tables below here
 CREATE TABLE responses (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  session_id VARCHAR(150),
+  session_id VARCHAR(150) UNIQUE KEY,
   user_name VARCHAR(150),
   email VARCHAR(150),
   user_password VARCHAR(150),
