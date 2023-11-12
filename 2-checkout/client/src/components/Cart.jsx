@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Cart = () => {
+const Cart = ({checkoutClickHandler}) => {
 
   return (
-    <div>Cart</div>
+    <div>
+      <div>Cart</div>
+      <button onClick={() => checkoutClickHandler()}>Checkout</button>
+    </div>
   );
 };
 

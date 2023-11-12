@@ -1,9 +1,20 @@
 import React from 'react';
 
-const Form2 = () => {
+const Form2 = ({nextClickHandler}) => {
 
   return (
-    <div>Form2</div>
+    <div>
+      <div>Form2</div>
+      <div>
+        <input placeholder="address line 1"></input>
+        <input placeholder="address line 2"></input>
+        <input placeholder="city"></input>
+        <input placeholder="state"></input>
+        <input placeholder="zip code"></input>
+        <input placeholder="phone number"></input>
+      </div>
+      <button onClick={() => nextClickHandler()}>Next</button>
+    </div>
   );
 };
 

@@ -9,14 +9,30 @@ import Confirmation from './Confirmation.jsx';
 
 const App = ({cookie}) => {
   console.log(cookie);
+  const[checkoutData, setCheckoutData] = React.useState([]);
+
+
+
+  const checkoutClickHandler = () => {
+    console.log(`clicked the checkout button`);
+  };
+
+  const nextClickHandler = (formData) => {
+    console.log(`clicked the next button`);
+  };
+
+  const confirmClickHandler = () => {
+    console.log(`clicked the confirm button`);
+  };
+
   return (
     <div>
       <div>App</div>
-      <div><Cart /></div>
-      <div><Form1 /></div>
-      <div><Form2 /></div>
-      <div><Form3 /></div>
-      <div><Confirmation /></div>
+      <div><Cart checkoutClickHandler={checkoutClickHandler} /></div>
+      <div><Form1 nextClickHandler={nextClickHandler} /></div>
+      <div><Form2 nextClickHandler={nextClickHandler} /></div>
+      <div><Form3 nextClickHandler={nextClickHandler} /></div>
+      <div><Confirmation checkoutData={checkoutData} confirmClickHandler={confirmClickHandler} /></div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import App from './components/App.jsx';
 
 render(
   <div>
-    <p>Checkout</p>
+    <h1>Checkout</h1>
     <p>
       <code>Page Cookie: {JSON.stringify(document.cookie, undefined, "\t")}</code>
     </p>
