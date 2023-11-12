@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 render(
   <div>
-    <p>Hello, World!</p>
+    <p>Checkout</p>
     <p>
       <code>Page Cookie: {JSON.stringify(document.cookie, undefined, "\t")}</code>
     </p>
