@@ -9,32 +9,32 @@ const Form2 = ({nextClickHandler}) => {
   const[phoneNumberText, setPhoneNumberText] = React.useState('');
 
   const addressLine1TextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 add1:     ${e.target.value}`);
     setAddressLine1Text(e.target.value);
   };
 
   const addressLine2TextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 add2:     ${e.target.value}`);
     setAddressLine2Text(e.target.value);
   };
 
   const cityTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 city:     ${e.target.value}`);
     setCityText(e.target.value);
   };
 
   const stateTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 state:    ${e.target.value}`);
     setStateText(e.target.value);
   };
 
   const zipCodeTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 zip:      ${e.target.value}`);
     setZipCodeText(e.target.value);
   };
 
   const phoneNumberTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form2 phone:    ${e.target.value}`);
     setPhoneNumberText(e.target.value);
   };
 
@@ -50,7 +50,7 @@ const Form2 = ({nextClickHandler}) => {
         <input placeholder="zip code" onChange={(e) => zipCodeTextChangeHandler(e)}></input>
         <input placeholder="phone number" onChange={(e) => phoneNumberTextChangeHandler(e)}></input>
       </div>
-      <button onClick={() => nextClickHandler()}>Next</button>
+      <button onClick={() => nextClickHandler(addressLine1Text, addressLine2Text, cityText, stateText, zipCodeText, phoneNumberText)}>Next</button>
     </div>
   );
 };

@@ -6,17 +6,17 @@ const Form1 = ({nextClickHandler}) => {
   const[passwordText, setPasswordText] = React.useState('');
 
   const nameTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form1 name:     ${e.target.value}`);
     setNameText(e.target.value);
   };
 
   const emailTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form1 email:    ${e.target.value}`);
     setEmailText(e.target.value);
   };
 
   const passwordTextChangeHandler = (e) => {
-    console.log(`${e.target.value}`);
+    console.log(`Form1 pass:     ${e.target.value}`);
     setPasswordText(e.target.value);
   };
 
@@ -29,7 +29,7 @@ const Form1 = ({nextClickHandler}) => {
         <input placeholder="email" onChange={(e) => emailTextChangeHandler(e)}></input>
         <input placeholder="password" onChange={(e) => passwordTextChangeHandler(e)}></input>
       </div>
-      <button onClick={() => nextClickHandler()}>Next</button>
+      <button onClick={() => nextClickHandler(nameText, emailText, passwordText)}>Next</button>
     </div>
   );
 };

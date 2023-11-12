@@ -17,7 +17,7 @@ const Confirmation = ({checkoutData, confirmClickHandler}) => {
       <h3>Payment Details</h3>
       <div>Form Data</div>
     </div>
-    <button onClick={confirmClickHandler()}>Confirm</button>
+    <button onClick={() => confirmClickHandler()}>Confirm</button>
     </div>
   );
 };
