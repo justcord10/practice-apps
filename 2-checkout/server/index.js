@@ -21,7 +21,7 @@ app.use(logger);
 // Serves up all static and generated assets in a specified folder.
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
-app.use(morgan('dev'))
+app.use(morgan('dev'));
 
 // routes /////////////////////////////////////////////////////////
 app.get('/checkout/:id', controllers.getAll);
