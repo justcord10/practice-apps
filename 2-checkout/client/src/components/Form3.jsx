@@ -30,7 +30,7 @@ const Form3 = ({nextClickHandler}) => {
 
   return (
     <div>
-      <div>Form3</div>
+      <h2>Payment Method</h2>
       <div>
         <input placeholder="credit card number" onChange={(e) => creditCardNumberTextChangeHandler(e)}></input>
         <input placeholder="expiry date" onChange={(e) => expiryDateTextChangeHandler(e)}></input>

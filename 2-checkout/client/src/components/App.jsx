@@ -10,6 +10,22 @@ import Confirmation from './Confirmation.jsx';
 const App = ({cookie}) => {
 
   const[checkoutData, setCheckoutData] = React.useState([{session_id: cookie}]);
+  const[pageToRender, setPageToRender] = React.useState(0);
+
+  React.useEffect(() => {
+    //if the checkout button has been pressed once or the final form has been submitted load the homepage only
+    if(checkoutData.length === 0 || (checkoutData[0].f1_is_filled === 1 && checkoutData[0].f2_is_filled === 1 && checkoutData[0].f3_is_filled === 1 && checkoutData[0].final_form_is_submitted === 1)) {
+      setPageToRender(0);
+    } else if (checkoutData[0].f1_is_filled === 0 && checkoutData[0].f2_is_filled === 0 && checkoutData[0].f3_is_filled === 0 && checkoutData[0].final_form_is_submitted === 0) {
+      setPageToRender(1);
+    } else if (checkoutData[0].f1_is_filled === 1 && checkoutData[0].f2_is_filled === 0 && checkoutData[0].f3_is_filled === 0 && checkoutData[0].final_form_is_submitted === 0) {
+      setPageToRender(2);
+    } else if (checkoutData[0].f1_is_filled === 1 && checkoutData[0].f2_is_filled === 1 && checkoutData[0].f3_is_filled === 0 && checkoutData[0].final_form_is_submitted === 0) {
+      setPageToRender(3);
+    } else if (checkoutData[0].f1_is_filled === 1 && checkoutData[0].f2_is_filled === 1 && checkoutData[0].f3_is_filled === 1 && checkoutData[0].final_form_is_submitted === 0) {
+      setPageToRender(4);
+    }
+  }, [checkoutData])
 
   React.useEffect(() => {
     Axios.get(`http://localhost:3001/checkout/${cookie}`)
@@ -120,12 +136,11 @@ const App = ({cookie}) => {
 
   return (
     <div>
-      <div>App</div>
-      <div><Cart checkoutClickHandler={checkoutClickHandler} /></div>
-      <div><Form1 nextClickHandler={nextClickHandler} /></div>
-      <div><Form2 nextClickHandler={next2ClickHandler} /></div>
-      <div><Form3 nextClickHandler={next3ClickHandler} /></div>
-      <div><Confirmation checkoutData={checkoutData} confirmClickHandler={confirmClickHandler} /></div>
+      <div>{pageToRender === 0 ? <Cart checkoutClickHandler={checkoutClickHandler} /> : (<div></div>)}</div>
+      <div>{pageToRender === 1 ? <Form1 nextClickHandler={nextClickHandler} /> : (<div></div>)}</div>
+      <div>{pageToRender === 2 ? <Form2 nextClickHandler={next2ClickHandler} /> : (<div></div>)}</div>
+      <div>{pageToRender === 3 ? <Form3 nextClickHandler={next3ClickHandler} /> : (<div></div>)}</div>
+      <div>{pageToRender === 4 ? <Confirmation checkoutData={checkoutData} confirmClickHandler={confirmClickHandler} /> : (<div></div>)}</div>
     </div>
   );
 };

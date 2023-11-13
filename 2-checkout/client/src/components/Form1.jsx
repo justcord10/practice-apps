@@ -23,7 +23,7 @@ const Form1 = ({nextClickHandler}) => {
 
   return (
     <div>
-      <div>Form1</div>
+      <h2>Account Details</h2>
       <div>
         <input placeholder="name" onChange={(e) => nameTextChangeHandler(e)}></input>
         <input placeholder="email" onChange={(e) => emailTextChangeHandler(e)}></input>

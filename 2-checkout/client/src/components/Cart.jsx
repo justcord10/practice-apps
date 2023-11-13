@@ -4,7 +4,7 @@ const Cart = ({checkoutClickHandler}) => {
 
   return (
     <div>
-      <div>Cart</div>
+      <h2>Cart</h2>
       <button onClick={() => checkoutClickHandler()}>Checkout</button>
     </div>
   );

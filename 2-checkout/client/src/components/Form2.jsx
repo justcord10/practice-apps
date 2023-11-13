@@ -41,7 +41,7 @@ const Form2 = ({nextClickHandler}) => {
 
   return (
     <div>
-      <div>Form2</div>
+      <h2>Shipping Information</h2>
       <div>
         <input placeholder="address line 1" onChange={(e) => addressLine1TextChangeHandler(e)}></input>
         <input placeholder="address line 2" onChange={(e) => addressLine2TextChangeHandler(e)}></input>
